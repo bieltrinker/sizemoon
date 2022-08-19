@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Blogs</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+
+     <div class="container mt-2">
+         <div class="card">
+             <div class="card-body">
+                 <form id="post-form">
+                     <center><h3>Enviar capítulos</h3></center>
+                     <textarea id="post" class="form-control" placeholder="Título"></textarea>
+                     <input type="file" class="form-control" id="image" accept="images/*">
+                     <div class="text-center">
+                         <button type="button" class="btn btn-success" onclick="upload()">Enviar</button>
+                     </div>
+
+                 </form>
+              </div>
+
+         </div>
+         <div class="row mt-4" id="posts">
+
+         </div>
+
+     </div>
+
+
+
+
+
+
+
+
+
+<!-- O núcleo Firebase JS SDK é sempre necessário e deve ser listado primeiro... certifique-se de remover o App da linha abaixo -->
+<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+
+<script>
+  // Configuração do seu aplicativo da web
+  var firebaseConfig = {
+    apiKey: "AIzaSyBHGC8MYHWiiRTjRue0pvz0K78Faiq10yA", // Api do firebase
+    authDomain: "sizemoon-81fe3.firebaseapp.com", // Domínio de autênticação
+    databaseURL: "https://sizemoon-81fe3-default-rtdb.firebaseio.com", // url do banco de dados 
+    projectId: "sizemoon-81fe3", // O ID do projeto
+    storageBucket: "sizemoon-81fe3.appspot.com", // Storage bucket
+    messagingSenderId: "138750969574", // Messagem ID
+    appId: "1:138750969574:web:38f54cb14b5add93815d27", // ID Do app
+    measurementId: "G-D016MR8QNJ" // ID Mensuravél
+  };
+  // inicialize O Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="defualt.js"></script>
+    </body>
+</html>
